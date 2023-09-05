@@ -134,7 +134,7 @@ Customized to the applicant, by including relevant information such as their nam
 
       (async () => {
          const browser = await puppeteer.launch({
-            headless: true,
+            headless: "new",
             ignoreDefaultArgs: ['--disable-extensions'], // this made it work for now
         });
         const page = await browser.newPage();
