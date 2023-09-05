@@ -133,7 +133,10 @@ Customized to the applicant, by including relevant information such as their nam
       console.log(generatedText);
 
       (async () => {
-        const browser = await puppeteer.launch();
+         const browser = await puppeteer.launch({
+            headless: true,
+            ignoreDefaultArgs: ['--disable-extensions'], // this made it work for now
+        });
         const page = await browser.newPage();
         const htmlContent = `${generatedText}`; // Replace with your OpenAI HTML
         await page.setContent(htmlContent);
