@@ -152,15 +152,17 @@ app.post("/generate-sop", async (req, res) => {
 
       doc.moveDown(2);
       // Add phone number link
-
+      let indx = 1;
       sections.forEach((section) => {
+        if (indx != 1) {
         doc
           .strokeColor("#000000")
           .lineWidth(1)
           .moveTo(50, doc.y)
           .lineTo(550, doc.y)
           .stroke();
-
+        }
+        indx++;
         doc.fontSize(12).text(section);
         doc.moveDown(1);
       });
