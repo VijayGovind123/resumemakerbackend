@@ -101,7 +101,8 @@ app.post("/generate-sop", async (req, res) => {
       Extra-curricular Activities: ${extra}]\n
       
       Please include the delimiter "ABCDE" between each section for easy parsing and also modify the content professionally using AI.
-      Please dont include name and job description in the resume and also add one line space after every heading `;
+      Please dont include name and job description in the resume and also add one line space after every heading
+      also start the content without any newlines at the starting of the resume`;
 
       const completion = await openai.completions.create({
         prompt: prompt,
