@@ -91,7 +91,7 @@ app.post("/generate-sop", async (req, res) => {
       const prompt = `Generate a professional resume for applying for job of a job description : ${jobdesc} \nneatly with  appropriate spacing and points with the following sections:
 
       
-      Introduction : write the short introduction as a student with the use of details  given below using ai \n
+      Summary : write the short introduction as a student with the use of details  given below using ai \n
       Education:${education} \n
       Experience: ${experience} \n
       Projects: ${projects} \n 
